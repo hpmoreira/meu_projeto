@@ -23,7 +23,9 @@ while (opcao != 3) do
     opcao = gets.to_i
     elsif opcao == 2
     puts
-    puts tarefas
+    tarefas.each_with_index do | lista, index |
+      puts "##{index+1} - #{lista}"
+    end
     puts
     opcao = menu
     opcao = gets.to_i
