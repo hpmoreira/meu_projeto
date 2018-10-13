@@ -10,20 +10,20 @@ end
 puts "Bem-vindo ao Task List! Escolha uma opção no menu: \n"
 puts menu
 opcao = gets.to_i
-tarefa = ""
+tarefas = []
 
 while (opcao != 3) do
   if opcao == 1
     print 'Digite sua tarefa: '
-    tarefa = gets.chomp
+    tarefas << gets.chomp
     puts
-    puts 'Tarefa cadastrada: ' + tarefa
+    puts 'Tarefa cadastrada: ' + tarefas[-1]
     puts
     opcao = menu
     opcao = gets.to_i
     elsif opcao == 2
     puts
-    puts tarefa
+    puts tarefas
     puts
     opcao = menu
     opcao = gets.to_i
